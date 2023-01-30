@@ -8,4 +8,5 @@ degree = 0
 while degree_two < number:                      # пока 2 в степени не будет больше числа
     print(f'2^{degree} = {degree_two}')         #
     degree += 1                                 #
-    degree_two = 2**degree                      # просчет идет последним что бы степень 2 не выходила за число
+    degree_two = 2**degree                      # просчет идет последним что бы степень 2
+                                                # не выходила за число при выводе
