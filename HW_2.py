@@ -21,14 +21,35 @@ while number_1 < sum_number:
     # второй цикл будет искать второе число сравнивая его с первым числом
     while number_2 < sum_number:
         if sum_number == number_1 + number_2 and product_number == number_1 * number_2:
+            print('while')
             print(f'{sum_number} = {number_1} + {number_2}')
             print(f'{product_number} = {number_1} * {number_2}')
             print(f'{sum_number} {product_number} -> {number_1} {number_2}')
-            # оператора break вернет в верхний цикл, а нужно выйти сразу из обоих, используем функцию exit()
-            exit()
+            # оператора break вернет в верхний цикл
+            break
         number_2 += 1
+    if sum_number == number_1 + number_2 and product_number == number_1 * number_2:
+        break
     # по завершению второе число сбрасывается и сравнивается со следующим первым числом
     number_2 = 1
     number_1 += 1
+else:
+    print('ниодно из чисел не подошло!')
+
+# через цикл for
+
+number_1 = 1
+number_2 = 1
+
+for number_1 in range(1, sum_number):
+    for number_2 in range(1, sum_number):
+        if sum_number == number_1 + number_2 and product_number == number_1 * number_2:
+            print('for')
+            print(f'{sum_number} = {number_1} + {number_2}')
+            print(f'{product_number} = {number_1} * {number_2}')
+            print(f'{sum_number} {product_number} -> {number_1} {number_2}')
+            break
+    if sum_number == number_1 + number_2 and product_number == number_1 * number_2:
+        break
 else:
     print('ниодно из чисел не подошло!')
