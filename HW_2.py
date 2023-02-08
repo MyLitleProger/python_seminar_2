@@ -53,3 +53,10 @@ for number_1 in range(1, sum_number):
         break
 else:
     print('ниодно из чисел не подошло!')
+
+print('#'*50)
+
+print('однострочник')
+
+nn = [j for i in range(1, sum_number) for j in range(1, sum_number) if sum_number == i + j and product_number == i * j]
+print(f'{sum_number} {product_number} -> {nn}')
